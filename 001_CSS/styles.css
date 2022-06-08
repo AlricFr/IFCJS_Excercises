@@ -1,0 +1,258 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    --main-background-color:#1D3557;
+    --secondary-background-color:#457B9D;
+    --highlight-color:#a8dadc;
+    --main-text-color:#f1faee;
+    --contrast-text-color:#1D3557;
+    --activation-color:#e63946;
+    --gradient-background-color:linear-gradient(to top, var(--main-background-color), var(--secondary-background-color));
+
+
+    background-color: var(--main-background-color);
+    color:var(--main-text-color);
+}
+
+body{
+    height:100vh; 
+    margin:0;
+    display:flex;
+    flex-direction:column;
+}
+
+header {
+    background-color: var(--secondary-background-color);
+    display: flex;
+    align-items: center;
+    padding: 0 5px 5px 5px;
+  }
+
+header *:last-child {
+    margin-left: auto;
+  }
+
+footer{
+    background-color: var(--secondary-background-color);
+    display: flex;
+    align-items: center;
+    padding: 0 5px 5px 5px;
+    margin-top:auto;
+    position:relative;
+    }
+
+
+h3{
+    display:flex;
+    justify-content:left;
+    font-size: 2rem;
+    padding-left: 5px;
+    background-color: var(--secondary-background-color);
+}
+
+.footer-link{
+    background-color: var(--secondary-background-color);
+}
+
+.company-logo{
+    width:2rem;
+    height:2rem;
+    padding:2.5px;
+    background-color: var(--secondary-background-color);
+}
+
+.page-header{
+    width:100vw;
+    height:2rem;
+    background-color: var(--highlight-color);
+    padding:5px;
+}
+
+.user-id{
+    background-color: green;
+    justify-items: right;
+    display: flex;
+    justify-content:right;
+    align-items:center;
+    margin-left: auto;
+}
+
+.user-name{
+    padding:5px;
+    background-color: var(--secondary-background-color);
+}
+
+.user-avatar{
+    border-radius:50%;
+    height: 4rem;
+    width: 4rem;
+    padding:5px;
+    background-color: var(--secondary-background-color);
+    transition: border-radius 100ms;
+}
+
+.user-avatar:hover{
+    border-radius: 10%;
+  }
+
+.grid-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+/* From uiverse.io by @alexruix */
+    .card {
+        height: 254px;
+        width: 190px;
+        padding:50px;
+        position: relative;
+        transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        border-radius: 1em;
+        display:flex;
+        justify-content: center;
+        align-content: center;
+    }
+   
+    /*Image*/
+   .card-image {
+        height: 100%;
+        width: 80%;
+        position: absolute;
+        display:flex;
+        justify-content: center;
+        align-content: center;
+        transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+        /*background: #0a3394;*/
+        background: var(--gradient-background-color);
+    }
+
+    .image-link{
+        background-color: var(--gradient-background-color);
+        display:flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+   .model-image{
+       background-color: var(--gradient-background-color);
+       width:60%;
+       height:60%;
+   }
+
+   .model-image:hover{
+        width:70%;
+        height:70%;
+   }
+
+   /*Description */
+   .card-description {
+    display: flex;
+    position: absolute;
+    gap: 1em;
+    flex-direction: column;
+    background-color: var(--highlight-color);
+    height: 70%;
+    width:70%;
+    bottom: 0;
+    border-radius: 1em 1em 0 0;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 1rem;
+   }
+   
+   /*Text*/
+   .text-title {
+    background-color: var(--highlight-color);
+    color:var(--contrast-text-color);
+    display: flex;
+    justify-content: center;
+    font-size: 1.4em;
+    font-weight: 700;
+   }
+   
+   .text-body {
+    background-color: var(--highlight-color);
+    color:var(--contrast-text-color);
+    font-size: 1em;
+    line-height: 150%;
+   }
+   
+   
+   /* Hover states */
+   
+   .card:hover .card-description {
+    transform: translateY(100%);
+   }
+   
+   .model-viewer-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+   }
+
+   .bim-model-container{
+       display: flex;
+       align-content: center;
+       justify-content:center;
+   }
+
+   .bim-viewer {
+       width:100vw;
+       height: 70vh;
+       padding: 0 10px 10px 10px;
+   }
+
+   /* From uiverse.io */
+    button {
+        font-family: inherit;
+        display: inline-block;
+        width: 8em;
+        height: 2.6em;
+        line-height: 2.5em;
+        margin: 20px;
+        position: relative;
+        overflow: hidden;
+        border: 2px solid var(--highlight-color);
+        transition: color .5s;
+        z-index: 1;
+        font-size: 1rem;
+        border-radius: 6px;
+        font-weight: 500;
+        color: var(--main-text-color);
+    }
+
+    button:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background: var(--secondary-background-color);
+        height: 150px;
+        width: 200px;
+        border-radius: 50%;
+    }
+
+    button:hover {
+        color: #fff;
+    }
+
+    button:before {
+        top: 100%;
+        left: 100%;
+        transition: all .7s;
+    }
+
+    button:hover:before {
+        top: -30px;
+        left: -30px;
+    }
+
+    button:active:before {
+        background: var(--activation-color);
+        transition: background 0s;
+    }
